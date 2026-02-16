@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: repo-gat
+Version: 0.1.0
+Summary: Reorganised GAT-based fungal pathogenicity pipeline
+Author: Lucia JC Lab
+Requires-Python: >=3.10
+Requires-Dist: torch>=2.0
+Requires-Dist: torch-geometric>=2.3
+Requires-Dist: numpy>=1.24
+Requires-Dist: networkx>=2.8
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: fair-esm>=2.0.0
+Requires-Dist: pandas>=1.5
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: biopython>=1.81
+Requires-Dist: tqdm>=4.65
+Requires-Dist: wandb>=0.15
+Requires-Dist: pyyaml>=6.0
+Provides-Extra: dev
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: pytest>=7.0; extra == "dev"
+Provides-Extra: hpo
+Requires-Dist: optuna>=3.5; extra == "hpo"

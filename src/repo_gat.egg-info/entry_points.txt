@@ -1,0 +1,2 @@
+[console_scripts]
+gat-pipeline = gat_pipeline.cli:main

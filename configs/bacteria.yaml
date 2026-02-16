@@ -1,0 +1,41 @@
+# Configuración base para experimentos con hongos
+species: bacteria
+root_path: ../data
+trim_thresh: 1000
+n_splits: 5
+ratio: 0.2
+
+# Rutas de entrada
+pos_samples_path: ../data/bacteria/orig_sample_list/bacteria_Essential_Genes.xlsx
+neg_samples_path: ../data/bacteria/orig_sample_list/bacteria_NonEssential_Genes.xlsx
+kfold_root_path: ../data/bacteria/kfold_splitted_data
+raw_data_path: ../data/bacteria/raw
+
+# Entrenamiento
+train_batch_size: 5
+test_batch_size: 4
+num_epochs: 200
+lr: 1.0e-6
+weight_decay: 5.0e-4
+drop_prob: 0.3
+model_saving_path: ../experiments/bacteria
+cuda_name: cuda:0
+model: gat
+esm_model_embeddings: facebook/esm2_t33_650M_UR50D
+esm_model_contacts: facebook/esm2_t33_650M_UR50D
+use_fgm: false
+wandb_project: bacteria_druggability_bingo_loss_desb_last
+wandb_entity: null
+wandb_run_prefix: bacteria
+use_wandb: true
+
+# Inferencia
+default_checkpoint_type: best_loss
+
+# Slurm helper (utilizado por los scripts)
+slurm:
+  time: 160:00:00
+  partition_constraint: dgx
+  gpus: 1
+  cpus_per_task: 8
+  mem: 80G
