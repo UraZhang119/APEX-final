@@ -1,4 +1,4 @@
-# ESM2-GAT-XAI: Drug Target Identification with Explainability
+# APEX : Attention-based Protein EXplainer
 
 Complete pipeline for predicting **druggability** (Human APEX-Drug) and **pathogen essentiality** (APEX-Tar) using:
 - **ESM2**: Pre-trained protein language model embeddings
