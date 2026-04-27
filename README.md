@@ -1,9 +1,11 @@
-# APEX : Attention-based Protein EXplainer
+# Reproducing APEX: Explainable AI for End-to-End Pathogen Target Discovery
 
-Complete pipeline for predicting **druggability** (Human APEX-Drug) and **pathogen essentiality** (APEX-Tar) using:
-- **ESM2**: Pre-trained protein language model embeddings
-- **GAT**: Graph Attention Networks
-- **GNNExplainer + Attention**: Interpretable predictions
+This project reproduces the public APEX pipeline for protein-level target discovery from the official code repository and associated preprint. It focuses on reproducing the official inference workflow, residue-level explanation outputs, and one small improvement that analyzes the behavior or robustness of the reproduced system.
+
+## What it Does
+
+APEX is an explainable machine learning pipeline for predicting protein-level target properties relevant to pharmacology and pathogen biology. It combines ESM2 protein language model embeddings, Graph Attention Networks, and explanation methods such as GNNExplainer and attention visualization to predict druggability and pathogen essentiality from protein sequences. In this project, I follow the official APEX workflow as closely as possible, adapt the original SLURM-based commands to a local reproducible notebook workflow, reproduce the official inference and explanation outputs, and add a small extension such as threshold sensitivity analysis, robustness checking, or a lightweight comparison against a simpler baseline.
+
 
 ---
 
@@ -63,6 +65,17 @@ sbatch scripts/plot_attention.sh \
 
 ---
 
+## Video Link
+
+- Demo Video:
+- Technical walk through:
+
+
+## Evaluation
+
+
+## Individual COntributions
+This project was completed individually
 ## Full Workflow
 
 ### Phase 1: Data Preparation (Optional - For New Training)
